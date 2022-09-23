@@ -1,9 +1,9 @@
 async function main() {
-  const Game = await ethers.getContractFactory("Game");
-  console.log("Deploying Game...");
-  const game = await Game.deploy();
-  await game.deployed();
-  console.log("Game deployed to:", game.address);
+  const Vault = await ethers.getContractFactory("Vault");
+  console.log("Deploying Vault...");
+  const vault = await Vault.deploy({ value: ethers.utils.parseEther("1") });
+  await vault.deployed();
+  console.log("Vault deployed to:", vault.address);
 }
 
 main()
